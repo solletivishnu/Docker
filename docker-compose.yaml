@@ -1,0 +1,51 @@
+version: "3"
+
+services:
+
+
+  redis:
+    image: redis
+    networks:
+      - back-tier
+
+  db: 
+    image: postgres:9.4
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - my-data:/var/lib/postgresql/data
+    networks:
+      - back-tier
+
+  votee:
+    image: vishnu9/vote:1.0
+    ports:
+      - 5000:90
+    restart: always
+    networks:
+      - front-tier
+      - back-tier
+
+    
+  workerr:
+    image: vishnu9/worker-micro-service:1.0
+    restart: always
+    networks:
+      - back-tier
+    
+  resultt:
+    image: vishnu9/result-micro-service:1.0
+    ports:
+      - 5001:90
+    restart: always 
+    networks:
+      - front-tier
+      - back-tier
+
+volumes:
+  my-data:
+    driver: local 
+networks:
+  front-tier:
+  back-tier:
