@@ -9,9 +9,8 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-# Set environment variables and expose the port
+# Set environment variables 
 ENV PORT 90
-EXPOSE 90
 
 # Start the app
 CMD ["node", "server.js"]

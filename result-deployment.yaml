@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: result
+  labels:
+    app: result
+    name: result
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: result
+  template:
+    metadata:
+      name: result
+      labels:
+        app: result
+    spec:
+      containers:
+        - image: dockersamples/examplevotingapp_result
+          name: result
+          ports:
+            - containerPort: 80
+              name: result
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: result
+  labels:
+    app: result
+    name: result
+spec:
+  type: LoadBalancer
+  ports:
+  - name: result
+    port: 5001
+    targetPort: 80
+    protocol: TCP
+  selector:
+    app: result
