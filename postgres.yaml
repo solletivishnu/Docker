@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - image: postgres:15-alpine
-        name: postgres-container
+        name: db
         env:
         - name: POSTGRES_USER
           value: postgres
@@ -26,7 +26,7 @@ spec:
           value: postgres
         ports:
         - containerPort: 5432
-          name: postgres-port
+          name: db
           
 
 ---
@@ -35,14 +35,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: db-service
+  name: db
   labels:
     app: db
     name: db
 spec:
   type: ClusterIP
   ports:
-  - name: db-service-port
+  - name: db
     port: 5432
     targetPort: 5432
   selector:
