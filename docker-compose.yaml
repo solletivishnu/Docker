@@ -3,29 +3,53 @@ version: "3"
 services:
 
   redis:
+    build: .
     image: redis:alpine
-    
+    networks:
+      - back-tier
+
   db:
+    build: .
     image: postgres:15-alpine
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+    volumes:
+      - my-data:/var/lib/postgresql/data
+    networks:
+      - back-tier
 
   votee:
+    build: .
     image: dockersamples/examplevotingapp_vote
     ports:
       - 5000:90
     restart: always
-    
+    networks:
+      - front-tier
+      - back-tier
 
     
   workerr:
+    build: .
     image: dockersamples/examplevotingapp_worker
     restart: always
+    networks:
+      - back-tier
     
-
   resultt:
+    build: .
     image: dockersamples/examplevotingapp_result
     ports:
       - 5001:90
     restart: always 
+    networks:
+      - front-tier
+      - back-tier
+
+volumes:
+  my-data:
+    driver: local 
+networks:
+  front-tier:
+  back-tier:
