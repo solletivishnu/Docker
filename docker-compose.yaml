@@ -3,13 +3,11 @@ version: "3"
 services:
 
   redis:
-    build: .
     image: redis:alpine
     networks:
       - back-tier
 
   db:
-    build: .
     image: postgres:15-alpine
     environment:
       POSTGRES_USER: postgres
@@ -20,7 +18,6 @@ services:
       - back-tier
 
   votee:
-    build: .
     image: dockersamples/examplevotingapp_vote
     ports:
       - 5000:90
@@ -31,14 +28,12 @@ services:
 
     
   workerr:
-    build: .
     image: dockersamples/examplevotingapp_worker
     restart: always
     networks:
       - back-tier
     
   resultt:
-    build: .
     image: dockersamples/examplevotingapp_result
     ports:
       - 5001:90
