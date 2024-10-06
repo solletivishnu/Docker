@@ -17,7 +17,7 @@ spec:
         app: result
     spec:
       containers:
-        - image: vishnu9/examplevotingapp_result:1.0
+        - image: vishnu9/examplevotingapp_result:2.0
           name: result
           ports:
             - containerPort: 80
