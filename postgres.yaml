@@ -27,6 +27,13 @@ spec:
         ports:
         - containerPort: 5432
           name: db
+        resources:
+          requests:
+            cpu: "100m"          # Request 500 millicores of CPU
+            memory: "128Mi"      # Request 512 MiB of memory
+          limits:
+            cpu: "100m"             # Limit CPU to 1 core
+            memory: "128Mi"        # Limit memory to 1 GiB
           
 
 ---

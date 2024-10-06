@@ -18,3 +18,10 @@ spec:
       containers:
         - image: vishnu9/examplevotingapp_worker:1.0
           name: worker
+          resources:
+            requests:
+              cpu: "100m"          # Request 500 millicores of CPU
+              memory: "128Mi"      # Request 512 MiB of memory
+            limits:
+              cpu: "100m"             # Limit CPU to 1 core
+              memory: "128Mi"  
