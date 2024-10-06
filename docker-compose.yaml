@@ -21,6 +21,8 @@ services:
     image: dockersamples/examplevotingapp_vote
     ports:
       - 5000:80
+    depends_on:
+      - redis
     restart: always
     networks:
       - front-tier
@@ -37,6 +39,8 @@ services:
     image: dockersamples/examplevotingapp_result
     ports:
       - 5001:80
+    depends_on:
+      - db
     restart: always 
     
     networks:
@@ -44,7 +48,7 @@ services:
       - back-tier
 
 volumes:
-  my-data:
+  my-data: 
     driver: local 
 networks:
   front-tier:
