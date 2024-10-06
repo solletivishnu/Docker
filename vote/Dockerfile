@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 COPY . /app
 
 # Expose the port the app runs on
-EXPOSE 90
+EXPOSE 80
 
 # Run the application with Gunicorn
 CMD ["python", "app.py"]

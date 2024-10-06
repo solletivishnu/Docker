@@ -18,7 +18,10 @@ services:
       - back-tier
 
   votee:
-    image: dockersamples/examplevotingapp_vote
+    build:
+      context: ./vote
+      dockerfile: Dockerfile
+    image: vishnu9/examplevotingapp_vote:1.o
     ports:
       - 5000:80
     depends_on:
@@ -30,13 +33,18 @@ services:
 
     
   workerr:
-    image: dockersamples/examplevotingapp_worker
+    build:
+      context: ./worker
+      dockerfile: Dockerfile
+    image: vishnu9/examplevotingapp_worker:1.0
     restart: always
     networks:
       - back-tier
     
   resultt:
-    image: dockersamples/examplevotingapp_result
+    build:
+      context: ./result
+    image: vishnu9/examplevotingapp_result:1.0
     ports:
       - 5001:80
     depends_on:
