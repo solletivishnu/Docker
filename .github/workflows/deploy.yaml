@@ -56,9 +56,4 @@ jobs:
       - name: Deploy to Kubernetes
         run: |
           gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project ${{ secrets.GCP_PROJECT_ID }}
-          kubectl apply -f postgres.yaml --validate=false
-          kubectl apply -f redis.yaml --validate=false
-          kubectl apply -f result-deployment.yaml --validate=false
-          kubectl apply -f vote-deployment.yaml --validate=false
-          kubectl apply -f worker.yaml --validate=false
-          kubectl get services
+          kubectl apply -f .
