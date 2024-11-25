@@ -6,7 +6,7 @@ A scalable microservices-based web voting application designed for seamless depl
 ## Live Website
 You can view the live demo of Voting Application:
 - **Live Website Link:** [Interface to Cast The Vote](http://34.30.49.181:5000/) <br><br>
-- [Interface to View The Result](http://35.184.226.17:5001/) <br><br>
+- **Live Website Link:** [Interface to View The Result](http://35.184.226.17:5001/) <br><br>
 
 ## Features
 - **Microservices Architecture:** Modular design with separate services for vote casting, results visualization, and data processing.
