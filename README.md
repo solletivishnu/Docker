@@ -5,9 +5,7 @@ A scalable microservices-based web voting application designed for seamless depl
 
 ## Live Website
 You can view the live demo of Voting Application:
-- **Live Website Link:** [Habibi Foods Live](https://dipeshchadgal10.pythonanywhere.com/) <br><br>
-
-![Food Ordering Home Page](https://github.com/grishma-gedela/Online-Food-Ordering---Infosys/assets/156117966/a6782d38-f65e-406d-b18a-b702568442cb)
+- **Live Website Link:** [Frontend Interface](https://dipeshchadgal10.pythonanywhere.com/) <br><br>
 
 ## Features
 - **Microservices Architecture:** Modular design with separate services for vote casting, results visualization, and data processing.
@@ -42,5 +40,5 @@ The web voting Application consists of the followiing services:
 
 ## User Login Page
 
-![Food Ordering User Login Page](https://github.com/grishma-gedela/Online-Food-Ordering---Infosys/assets/156117966/3e41ca45-f458-4a32-a044-861fcab6d8ef)
+![Food Ordering User Login Page]()
 
