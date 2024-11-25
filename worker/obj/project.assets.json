@@ -1131,11 +1131,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\solle\\OneDrive\\Desktop\\web voting\\worker\\Worker.csproj",
+      "projectUniqueName": "C:\\Users\\solle\\Web-Voting-Application\\worker\\Worker.csproj",
       "projectName": "Worker",
-      "projectPath": "C:\\Users\\solle\\OneDrive\\Desktop\\web voting\\worker\\Worker.csproj",
+      "projectPath": "C:\\Users\\solle\\Web-Voting-Application\\worker\\Worker.csproj",
       "packagesPath": "C:\\Users\\solle\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\solle\\OneDrive\\Desktop\\web voting\\worker\\obj\\",
+      "outputPath": "C:\\Users\\solle\\Web-Voting-Application\\worker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\solle\\AppData\\Roaming\\NuGet\\NuGet.Config"

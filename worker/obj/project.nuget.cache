@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nTWx5/KP1UM=",
+  "dgSpecHash": "Mx8sSKT/TnI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\solle\\OneDrive\\Desktop\\web voting\\worker\\Worker.csproj",
+  "projectFilePath": "C:\\Users\\solle\\Web-Voting-Application\\worker\\Worker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\solle\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\solle\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",

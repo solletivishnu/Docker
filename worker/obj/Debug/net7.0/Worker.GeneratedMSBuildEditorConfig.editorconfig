@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Worker
-build_property.ProjectDir = C:\Users\solle\OneDrive\Desktop\web voting\worker\
+build_property.ProjectDir = C:\Users\solle\Web-Voting-Application\worker\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
